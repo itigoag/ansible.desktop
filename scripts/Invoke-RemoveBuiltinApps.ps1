@@ -38,8 +38,8 @@ $WhiteListedApps.AddRange(@(
     "Microsoft.WindowsAlarms",
     "Microsoft.WindowsCalculator", 
     # "Microsoft.WindowsCommunicationsApps", # Mail, Calendar etc
-    # "Microsoft.WindowsSoundRecorder", 
-    # "Microsoft.WindowsStore"
+    "Microsoft.WindowsSoundRecorder",
+    "Microsoft.WindowsStore"
 ))
 
 # Windows 10 version 1809
