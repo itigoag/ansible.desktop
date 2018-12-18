@@ -38,7 +38,7 @@ $WhiteListedApps.AddRange(@(
     "Microsoft.WindowsAlarms",
     "Microsoft.WindowsCalculator", 
     # "Microsoft.WindowsCommunicationsApps", # Mail, Calendar etc
-    "Microsoft.WindowsSoundRecorder", 
+    # "Microsoft.WindowsSoundRecorder", 
     # "Microsoft.WindowsStore"
 ))
 
