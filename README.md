@@ -1,6 +1,6 @@
 # Ansible Role: desktop
 
-[![Build Status](https://img.shields.io/travis-ci/itigoag/ansible.desktop.svg?branch=master&style=popout-square)](https://travis-ci.org/itigoag/ansible.desktop) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://sbaerlo.ch/licence) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-desktop-blue.svg?style=popout-square)](https://galaxy.ansible.com/itigoag/desktop) [![Ansible Role](https://img.shields.io/ansible/role/d/id.svg?style=popout-square)](https://galaxy.ansible.com/itigoag/desktop)
+[![Build Status](https://img.shields.io/travis-ci/itigoag/ansible.desktop.svg?branch=master&style=popout-square)](https://travis-ci.org/itigoag/ansible.desktop) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://sbaerlo.ch/licence) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-desktop-blue.svg?style=popout-square)](https://galaxy.ansible.com/itigoag/desktop) [![Ansible Role](https://img.shields.io/ansible/role/d/35667.svg?style=popout-square)](https://galaxy.ansible.com/itigoag/desktop)
 
 ## Description
 
