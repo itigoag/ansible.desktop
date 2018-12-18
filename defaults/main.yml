@@ -1,2 +1,93 @@
 ---
 # defaults file for itigoag.desktop
+
+# default
+desktop_ressourcen_name: "{{ source_of_supply_name | default('Support') }}"
+desktop_root_directory: "{{ ansible_env.SystemDrive }}\\{{ desktop_ressourcen_name }}"
+
+# settings
+desktop_auto_tray_enabled: false
+desktop_task_view_button_enabled: false
+desktop_first_logon_animation_enabled: false
+desktop_windowsconsumerfeatures_enabled: false
+desktop_file_ext_enabled: true
+desktop_people_bar_enabled: false
+desktop_defender_security_notifications_enabled: false
+desktop_ie_first_run_wizard_enabled: false
+
+desktop_explorer_shortcuts:
+  # Computer
+  - name: "{20D04FE0-3AEA-1069-A2D8-08002B30309D}"
+    data: "0"
+  # Benutzerordner
+  - name: "{59031a47-3f72-44a7-89c5-5595fe6b30ee}"
+    data: "0"
+  # Papierkorb
+  - name: "{645FF040-5081-101B-9F08-00AA002F954E}"
+    data: "0"
+
+desktop_startlayouts:
+  startlayout:
+    - group: Computer
+      icons:
+        - Size: "2x2"
+          Column: "0"
+          Row: "0"
+          DesktopApplicationLinkPath: "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\File Explorer.lnk"
+        - Size: "2x2"
+          Column: "2"
+          Row: "0"
+          DesktopApplicationLinkPath: "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\computer.lnk"
+    - group: Browser
+      icons:
+        - Size: "2x2"
+          Column: "0"
+          Row: "0"
+          DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Mozilla Firefox.lnk"
+    - group: Office
+      icons:
+        - Size: "2x2"
+          Column: "0"
+          Row: "0"
+          DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Acrobat Reader DC.lnk"
+        - Size: "2x2"
+          Column: "2"
+          Row: "0"
+          DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk"
+        - Size: "2x2"
+          Column: "0"
+          Row: "2"
+          DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Outlook 2016.lnk"
+        - Size: "2x2"
+          Column: "2"
+          Row: "2"
+          DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk"
+        - Size: "2x2"
+          Column: "2"
+          Row: "0"
+          DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Word.lnk"
+        - Size: "2x2"
+          Column: "0"
+          Row: "2"
+          DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Outlook.lnk"
+        - Size: "2x2"
+          Column: "2"
+          Row: "2"
+          DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Excel.lnk"
+  tasklayout:
+    - taskbar: DesktopApp
+      DesktopApplicationLinkPath: "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\File Explorer.lnk"
+    - taskbar: DesktopApp
+      DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Firefox.lnk"
+    - taskbar: DesktopApp
+      DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Outlook 2016.lnk"
+    - taskbar: DesktopApp
+      DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk"
+    - taskbar: DesktopApp
+      DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk"
+    - taskbar: DesktopApp
+      DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Outlook.lnk"
+    - taskbar: DesktopApp
+      DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Word.lnk"
+    - taskbar: DesktopApp
+      DesktopApplicationLinkPath: "%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Excel.lnk"
