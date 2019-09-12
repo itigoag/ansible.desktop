@@ -9,7 +9,7 @@ $Profiles = Get-ChildItem -Path HKU:\
 foreach ($Profile in $Profiles) {
     if ((($Profile.PSChildName).Length -gt 8) -and ($Profile.Name -notlike "*_Classes")) {
         $UserRegPath = "HKU:\" + $Profile.PSChildName + "\Software\Microsoft\Windows\CurrentVersion\Search"
-        New-ItemProperty -Path $UserRegPath -PropertyType DWord -Name "SearchboxTaskbarMode" -Value 0 -ErrorAction SilentlyContinue
+        New-ItemProperty -Path $UserRegPath -PropertyType DWord -Name "SearchboxTaskbarMode" -Value 1 -ErrorAction SilentlyContinue
     }
 }
 Remove-PSDrive -Name HKU

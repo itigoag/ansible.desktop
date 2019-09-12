@@ -32,6 +32,8 @@
 - name: 'windows : import startlayouts'
   win_shell: "Import-StartLayout -LayoutPat {{ desktop_root_directory }}\\xml.d\\startlayouts.xml -MountPath $env:SystemDrive\\"
   when: register_startlayouts.changed
+  tags:
+    - skip_ansible_lint
 
 - name: 'windows : remove edge icon'
   win_file:
