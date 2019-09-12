@@ -117,7 +117,7 @@
 
 - name: 'windows : list of users in Registry'
   win_reg_stat:
-    path: HKU:\
+    path: "HKU:\\"
   register: register_dekstop_reg_users
 
 - name: 'windows : small search icon'
