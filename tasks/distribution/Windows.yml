@@ -128,3 +128,21 @@
     type: dword
   loop: '{{ register_dekstop_reg_users.sub_keys }}'
   when: "'Classes' not in item and item > 10"
+
+- name: 'windows : small search CenterScreenRoundedCornerRadius'
+  win_regedit:
+    path: "HKU:\\{{ item }}\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\\Flighting\\Override"
+    name: CenterScreenRoundedCornerRadius
+    data: 0
+    type: dword
+  loop: '{{ register_dekstop_reg_users.sub_keys }}'
+  when: "'Classes' not in item and item > 10"
+
+- name: 'windows : small search ImmersiveSearchFull'
+  win_regedit:
+    path: "HKU:\\{{ item }}\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\\Flighting\\Override"
+    name: ImmersiveSearchFull
+    data: 1
+    type: dword
+  loop: '{{ register_dekstop_reg_users.sub_keys }}'
+  when: "'Classes' not in item and item > 10"
