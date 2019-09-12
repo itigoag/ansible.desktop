@@ -113,5 +113,5 @@
 - name: 'windows : Invoke Remove Builtin Apps'
   script: scripts/Invoke-RemoveBuiltinApps.ps1
 
-- nmae: 'windows : small search Icon'
+- name: 'windows : small search Icon'
   script: scripts/search-Bar.ps1
