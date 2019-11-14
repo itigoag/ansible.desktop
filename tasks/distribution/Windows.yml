@@ -114,35 +114,34 @@
 
 - name: 'windows : Invoke Remove Builtin Apps'
   script: scripts/Invoke-RemoveBuiltinApps.ps1
+#- name: 'windows : list of users in Registry'
+#  win_reg_stat:
+#    path: "HKU:\\"
+#  register: register_dekstop_reg_users
 
-- name: 'windows : list of users in Registry'
-  win_reg_stat:
-    path: "HKU:\\"
-  register: register_dekstop_reg_users
+#- name: 'windows : small search icon'
+#  win_regedit:
+#    path: "HKU:\\{{ item }}\\Software\\Microsoft\\Windows\\CurrentVersion\\Search"
+#    name: SearchboxTaskbarMode
+#    data: 1
+#    type: dword
+#  loop: '{{ register_dekstop_reg_users.sub_keys }}'
+#  when: "'Classes' not in item and item > 10"
 
-- name: 'windows : small search icon'
-  win_regedit:
-    path: "HKU:\\{{ item }}\\Software\\Microsoft\\Windows\\CurrentVersion\\Search"
-    name: SearchboxTaskbarMode
-    data: 1
-    type: dword
-  loop: '{{ register_dekstop_reg_users.sub_keys }}'
-  when: "'Classes' not in item and item > 10"
+#- name: 'windows : small search CenterScreenRoundedCornerRadius'
+#  win_regedit:
+#    path: "HKU:\\{{ item }}\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\\Flighting\\Override"
+##    name: CenterScreenRoundedCornerRadius
+#    data: 0
+#    type: dword
+#  loop: '{{ register_dekstop_reg_users.sub_keys }}'
+#  when: "'Classes' not in item and item > 10"
 
-- name: 'windows : small search CenterScreenRoundedCornerRadius'
-  win_regedit:
-    path: "HKU:\\{{ item }}\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\\Flighting\\Override"
-    name: CenterScreenRoundedCornerRadius
-    data: 0
-    type: dword
-  loop: '{{ register_dekstop_reg_users.sub_keys }}'
-  when: "'Classes' not in item and item > 10"
-
-- name: 'windows : small search ImmersiveSearchFull'
-  win_regedit:
-    path: "HKU:\\{{ item }}\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\\Flighting\\Override"
-    name: ImmersiveSearchFull
-    data: 1
-    type: dword
-  loop: '{{ register_dekstop_reg_users.sub_keys }}'
-  when: "'Classes' not in item and item > 10"
+#- name: 'windows : small search ImmersiveSearchFull'
+#  win_regedit:
+#    path: "HKU:\\{{ item }}\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\\Flighting\\Override"
+#    name: ImmersiveSearchFull
+#    data: 1
+#    type: dword
+#  loop: '{{ register_dekstop_reg_users.sub_keys }}'
+#  when: "'Classes' not in item and item > 10"
